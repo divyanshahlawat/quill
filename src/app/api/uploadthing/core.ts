@@ -52,9 +52,7 @@ const onUploadComplete = async ({
   });
 
   try {
-    const response = await fetch(
-      `https://uploadthing-prod.s3.us-west-2.amazonaws.com/${file.key}`
-    );
+    const response = await fetch(file.url);
 
     const blob = await response.blob();
 
